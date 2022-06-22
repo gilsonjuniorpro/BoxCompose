@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(16.dp)
-                ){
+                ) {
                     Avatar()
                     Indicator(Modifier)
                 }
@@ -42,14 +42,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Indicator(modifier: Modifier = Modifier){
+fun Indicator(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .clip(CircleShape)
             .background(Color.Green)
             .size(25.dp),
         Alignment.Center
-    ){
+    ) {
         Text(
             text = "99+",
             style = TextStyle(
@@ -61,13 +61,13 @@ fun Indicator(modifier: Modifier = Modifier){
 }
 
 @Composable
-fun Avatar(modifier: Modifier = Modifier){
+fun Avatar(modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .requiredSize(90.dp),
         shape = CircleShape,
         elevation = 2.dp
-    ){
+    ) {
         Image(
             painterResource(R.drawable.photo),
             contentDescription = null,
